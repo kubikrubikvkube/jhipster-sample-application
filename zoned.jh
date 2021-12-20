@@ -1,0 +1,17 @@
+
+entity WatchedRefinancing {
+	id UUID required,
+	agreementId UUID required,
+    currentRefinancingId UUID required,
+    siebelId String required,
+    agreementCftId String required,
+    watchStartTime ZonedDateTime required,
+    watchEndTime ZonedDateTime required
+}
+
+
+paginate WatchedRefinancing with infinite-scroll
+
+dto * with mapstruct
+
+service all with serviceImpl
